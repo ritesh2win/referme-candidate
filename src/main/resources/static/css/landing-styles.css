@@ -2,26 +2,27 @@
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #112233;
+  background: url('../assets/img/landing-bg.jpg') no-repeat scroll;
 }
 
 .weather-card {
   margin: 60px auto;
-  height: 740px;
-  width: 450px;
+  height: 500px;
+  width: 540px;
   background: #fff;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 .weather-card .top {
   position: relative;
-  height: 570px;
+  height: 440px;
   width: 100%;
   overflow: hidden;
   background: url('../assets/img/candidate.png') no-repeat scroll;
   background-size: cover;
   background-position: center center;
   text-align: center;
+  cursor: pointer;
 }
 .weather-card .top .wrapper {
   padding: 30px;
@@ -71,6 +72,7 @@ body {
   font-weight: 600;
   color: #fff;
 }
+
 .weather-card .top .wrapper .temp .deg {
   display: inline-block;
   font-size: 35px;
@@ -87,11 +89,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(0 0 0 / 20%);
 }
 .weather-card .bottom {
-  padding: 0 30px;
-  background: #fff;
+  padding: 0 100px;
+  background: #029027d9;
+  cursor: pointer;
 }
 .weather-card .bottom .wrapper .forecast {
   overflow: hidden;
@@ -100,6 +103,14 @@ body {
   padding: 0;
   padding-top: 20px;
   max-height: 155px;
+}
+.weather-card .bottom .wrapper  .temp-value {
+      font-size: 45px;
+      font-weight: 560;
+      color: #f7f7f7;
+      margin: 50px;
+      padding: 20px;
+      font-family: ui-rounded;
 }
 .weather-card .bottom .wrapper .forecast a {
   text-decoration: none;
