@@ -1,6 +1,6 @@
 package com.referme.candidate.services.dynamodb;
 
-import com.referme.candidate.model.Candidate;
+import com.referme.candidate.dto.CandidateDetail;
 import com.referme.candidate.repository.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,9 +10,9 @@ public class DynamoDbServices {
     @Autowired
     CandidateRepository candidateRepository;
 
-    public Candidate saveCandidateDetails(Candidate candidate)
+    public CandidateDetail saveCandidateDetails(CandidateDetail candidateDetail)
     {
-        return candidateRepository.saveCandidate(candidate);
+        return candidateRepository.saveCandidate(candidateDetail);
     }
 
 }

@@ -28,4 +28,11 @@ public class HomeController {
         modelAndView.setViewName("CandidateHome");
         return modelAndView;
     }
+    @GetMapping(value = "/success")
+    public ModelAndView success()
+    {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("success");
+        return modelAndView;
+    }
 }

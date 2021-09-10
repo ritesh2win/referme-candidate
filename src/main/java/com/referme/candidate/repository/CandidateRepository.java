@@ -4,6 +4,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBSaveExpression;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.ExpectedAttributeValue;
+import com.referme.candidate.dto.CandidateDetail;
 import com.referme.candidate.model.Candidate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -14,9 +15,9 @@ public class CandidateRepository  {
     @Autowired
     private DynamoDBMapper dynamoDBMapper;
 
-    public Candidate saveCandidate(Candidate candidate) {
-        dynamoDBMapper.save(candidate);
-        return candidate;
+    public CandidateDetail saveCandidate(CandidateDetail candidateDetail) {
+        dynamoDBMapper.save(candidateDetail);
+        return candidateDetail;
     }
 
     public Candidate getCandidateById(String candidateId) {
