@@ -1,6 +1,10 @@
-E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\services\s3\UploadS3.java
 E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\CandidateApplication.java
+E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\configuration\ApplicationConfiguration.java
+E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\controller\HomeController.java
 E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\controller\CandidateController.java
-E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\controller\CandidateHomeController.java
 E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\services\s3\AmazonClient.java
+E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\configuration\SecurityConfiguration.java
+E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\configuration\ValidationConfiguration.java
 E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\controller\S3BucketController.java
+E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\services\candidate\CandidateService.java
+E:\ReferMe\referme-candidate\src\main\java\com\referme\candidate\model\Candidate.java
