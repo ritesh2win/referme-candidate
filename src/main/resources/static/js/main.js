@@ -42,22 +42,26 @@ $(function(){
             var firstName = $('#firstName').val();
             var lastName = $('#lastName').val();
             var email = $('#email').val();
-            var contactNo = $('#contactNo').val();
-            var jobID = $('#jobID').val();
+            var contact = $('#contact').val();
+            var jobId = $('#jobId').val();
             var experience = $('#experience').val();
             var skills = $('#skills').val();
-            var relocate = $('#relocate').val();
-            var activeForJob = $('#activeForJob').val();
+            var readyToRelocate = $('#readyToRelocate').val();
+            var isActiveForJob = $('#isActiveForJob').val();
+            var resume = $('#resume').val();
+
 
             $('#firstName-val').text(firstName);
             $('#lastName-val').text(lastName);
             $('#email-val').text(email);
-            $('#contactNo-val').text(contactNo);
-            $('#jobID-val').text(jobID);
+            $('#contact-val').text(contact);
+            $('#jobId-val').text(jobId);
             $('#experience-val').text(experience);
             $('#skills-val').text(skills);
-            $('#relocate-val').text(relocate);
-            $('#activeForJob-val').text(activeForJob);
+            $('#readyToRelocate-val').text(readyToRelocate);
+            $('#isActiveForJob-val').text(isActiveForJob);
+            $('#resume-val').text(resume);
+
             $("#form-register").validate().settings.ignore = ":disabled,:hidden";
             return $("#form-register").valid();
         }

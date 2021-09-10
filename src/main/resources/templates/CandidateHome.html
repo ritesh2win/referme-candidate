@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Wizard-v1</title>
+	<title>Candidate Details</title>
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
@@ -17,7 +17,7 @@
 	<div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
 		<div class="wizard-v1-content">
 			<div class="wizard-form">
-		        <form class="form-register" id="form-register" action="#" method="post">
+		        <form class="form-register" id="form-register" action="/candidate/candidateFormSubmit" method="post" enctype="multipart/form-data" >
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
 			            <h2>
@@ -45,8 +45,8 @@
 								</div>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
-										<label for="contactNo">Contact No*</label>
-										<input type="text" placeholder="Contact Details" class="form-control" id="contactNo" name="contactNo" required>
+										<label for="contact">Contact No*</label>
+										<input type="text" placeholder="Contact Details" class="form-control" id="contact" name="contact" required>
 									</div>
 								</div>
 							</div>
@@ -61,8 +61,8 @@
 			                <div class="inner">
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
-										<label for="jobID">Job ID</label>
-										<input type="text" placeholder="Please enter Job ID for which you want to be referred" class="form-control" id="jobID" name="jobID" required>
+										<label for="jobId">Job ID</label>
+										<input type="text" placeholder="Please enter Job ID for which you want to be referred" class="form-control" id="jobId" name="jobId" required>
 									</div>
 								</div>
 								<div class="form-row">
@@ -77,20 +77,26 @@
 								</div>
 								<div class="form-row form-row-2">
 									<div class="form-holder">
-										<label for="relocate">Ready to Relocate</label>
-										<select name="relocate" id="relocate" class="form-control">
+										<label for="readyToRelocate">Ready to Relocate</label>
+										<select name="readyToRelocate" id="readyToRelocate" class="form-control">
 											<option value="" disabled selected>Please select</option>
 											<option value="yes">Yes</option>
 											<option value="no">No</option>
 										</select>
 									</div>
 									<div class="form-holder">
-										<label for="activeForJob">Actively Looking For Job</label>
-										<select name="activeForJob" id="activeForJob" class="form-control">
+										<label for="isActiveForJob">Actively Looking For Job</label>
+										<select name="isActiveForJob" id="isActiveForJob" class="form-control">
 											<option value="" disabled selected>Please select</option>
 											<option value="yes">Yes</option>
 											<option value="no">No</option>
 										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+								<label class="form-label" for="resume">Upload Your Resume</label>
+								<input type="file" class="form-control" name="resume" id="resume" />
 									</div>
 								</div>
 							</div>
@@ -121,11 +127,11 @@
 											</tr>
 											<tr class="space-row">
 												<th>Contact No:</th>
-												<td id="contactNo-val"></td>
+												<td id="contact-val"></td>
 											</tr>
 											<tr class="space-row">
 												<th>Job ID:</th>
-												<td id="jobID-val"></td>
+												<td id="jobId-val"></td>
 											</tr>
 											<tr class="space-row">
 												<th>Profession Experience:</th>
@@ -137,11 +143,15 @@
 											</tr>
 											<tr class="space-row">
 												<th>Ready to Relocate:</th>
-												<td id="relocate-val"></td>
+												<td id="readyToRelocate-val"></td>
 											</tr>
 											<tr class="space-row">
 												<th>Actively Looking For Job:</th>
-												<td id="activeForJob-val"></td>
+												<td id="isActiveForJob-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Resume:</th>
+												<td id="resume-val"></td>
 											</tr>
 										</tbody>
 									</table>
@@ -158,5 +168,6 @@
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 	<script src="js/jquery.steps.js"></script>
 	<script src="js/main.js"></script>
+
 </body>
 </html>

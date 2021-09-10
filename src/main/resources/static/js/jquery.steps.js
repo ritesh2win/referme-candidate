@@ -1936,7 +1936,9 @@ var defaults = $.fn.steps.defaults = {
      * @default function (event, currentIndex) { }
      * @for defaults
      **/
-    onFinished: function (event, currentIndex) { },
+    onFinished: function (event, currentIndex) {
+      document.getElementById("form-register").submit();
+     },
 
     /**
      * Fires after async content is loaded. 

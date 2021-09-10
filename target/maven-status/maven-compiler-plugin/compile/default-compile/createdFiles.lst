@@ -1,0 +1,6 @@
+com\referme\candidate\controller\CandidateHomeController.class
+com\referme\candidate\services\s3\AmazonClient.class
+com\referme\candidate\CandidateApplication.class
+com\referme\candidate\controller\S3BucketController.class
+com\referme\candidate\controller\CandidateController.class
+com\referme\candidate\configuration\SecurityConfiguration.class
