@@ -1,12 +1,9 @@
 package com.referme.candidate.model;
 
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import java.util.ArrayList;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Positive;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Candidate {
 

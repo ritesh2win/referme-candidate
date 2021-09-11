@@ -1,4 +1,4 @@
-package com.referme.candidate.repository;
+package com.referme.candidate.repository.impl;
 
 
 import com.referme.candidate.dto.CandidateDetail;

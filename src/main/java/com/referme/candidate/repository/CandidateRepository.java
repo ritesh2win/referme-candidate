@@ -1,41 +1,16 @@
 package com.referme.candidate.repository;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBSaveExpression;
-import com.amazonaws.services.dynamodbv2.model.AttributeValue;
-import com.amazonaws.services.dynamodbv2.model.ExpectedAttributeValue;
 import com.referme.candidate.dto.CandidateDetail;
 import com.referme.candidate.model.Candidate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public class CandidateRepository  {
+public interface CandidateRepository {
 
-    @Autowired
-    private DynamoDBMapper dynamoDBMapper;
+	CandidateDetail saveCandidate(CandidateDetail candidateDetail);
 
-    public CandidateDetail saveCandidate(CandidateDetail candidateDetail) {
-        dynamoDBMapper.save(candidateDetail);
-        return candidateDetail;
-    }
+	CandidateDetail getCandidateById(String candidateId);
 
-    public Candidate getCandidateById(String candidateId) {
-        return dynamoDBMapper.load(Candidate.class, candidateId);
-    }
+	String deleteCandidateById(String candidateId);
 
-    public String deleteCandidateById(String candidateId) {
-        dynamoDBMapper.delete(dynamoDBMapper.load(Candidate.class, candidateId));
-        return "Candidate Id : "+ candidateId +" Deleted!";
-    }
+	String updateCandidate(String candidateId, Candidate candidate);
 
-    public String updateCandidate(String candidateId, Candidate candidate) {
-        dynamoDBMapper.save(candidate,
-                new DynamoDBSaveExpression()
-                        .withExpectedEntry("candidateId",
-                                new ExpectedAttributeValue(
-                                        new AttributeValue().withS(candidateId)
-                                )));
-        return candidateId;
-    }
 }

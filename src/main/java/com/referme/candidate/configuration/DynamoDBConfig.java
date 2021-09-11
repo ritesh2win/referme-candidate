@@ -1,18 +1,16 @@
 package com.referme.candidate.configuration;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.client.builder.AwsClientBuilder;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.thymeleaf.util.StringUtils;
+
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 
 @Configuration
 public class DynamoDBConfig {
@@ -39,7 +37,7 @@ public class DynamoDBConfig {
         return AmazonDynamoDBClientBuilder
                 .standard()
                 .withEndpointConfiguration(
-                        new AwsClientBuilder.EndpointConfiguration(dynamodbEndpoint,awsRegion))
+                        new AwsClientBuilder.EndpointConfiguration(dynamodbEndpoint,Regions.fromName(awsRegion).getName()))
                 .withCredentials(new AWSStaticCredentialsProvider(
                         new BasicAWSCredentials(dynamodbAccessKey+"7OYRJERFAS3",dynamodbSecretKey+"9Wyy3I91uL45Wr2VkfYYMFtMXsXZjl2")))
                 .build();
